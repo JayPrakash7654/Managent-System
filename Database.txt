@@ -1,0 +1,63 @@
+ -> use webapp;
+
+ -> "user" table.
+
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `pass` varchar(15) NOT NULL,
+  `mobileno` bigint NOT NULL,
+  `gender` varchar(9) NOT NULL,
+  `securityquestions` varchar(100) NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  `image` mediumblob NOT NULL,
+  `dob` date NOT NULL,
+  `createdat` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedat` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ -> "address" table.
+
+     CREATE TABLE `address` (
+  `address` varchar(45) DEFAULT NULL,
+  `district` varchar(45) DEFAULT NULL,
+  `state` varchar(45) DEFAULT NULL,
+  `id` int NOT NULL,
+  `pincode` int DEFAULT NULL,
+  `createdat` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedat` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `id_idx` (`id`),
+  CONSTRAINT `id` FOREIGN KEY (`id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ->  "role" table.
+
+     CREATE TABLE `role` (
+  `id` int NOT NULL,
+  `role` varchar(45) NOT NULL,
+  `createdat` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedat` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+       The user_role table should contain the mapping between each user and their roles. Each user can have many roles, and each role can have many 		users:
+ ->  "user_role" table.
+
+    CREATE TABLE `userrole` (
+  `userid` int NOT NULL,
+  `roleid` int NOT NULL,
+  `createdat` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedat` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`userid`,`roleid`),
+  KEY `role_id_idx` (`roleid`),
+  CONSTRAINT `roleid` FOREIGN KEY (`roleid`) REFERENCES `role` (`id`),
+  CONSTRAINT `userid` FOREIGN KEY (`userid`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
