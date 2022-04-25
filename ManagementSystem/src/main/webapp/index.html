@@ -1,78 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-	<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<script> 
-function validate()
-{ 
-     var email = document.form.email.value; 
-     var pass = document.form.pass.value;
- 
-     if (email==null || email=="")
-     { 
-     alert("Email cannot be blank"); 
-     return false; 
-     }
-     else if(pass==null || pass=="")
-     { 
-     alert("Password cannot be blank"); 
-     return false; 
-     } 
-}
-
-</script> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Playfair+Display:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
-<body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
-				</div>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">Welcome To My Application</h1>
+	                        <p class="hero-paragraph">This is welcome page, from here you can login as a Admin or User.</p>
+	                        <div class="hero-cta"><a class="button button-shadow" href="Adminlogin.html">Admin login</a><a class="button button-primary button-shadow" href="userlogin.html">User login</a></div>
+						</div>
+						<div class="hero-app">
+							<img class="device-mockup" src="images/iphone-mockup.png" alt="App preview">  
+						</div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-				<form class="login100-form" action="LoginServlet" name="form" method="post" onsubmit="return validate()">
-					<span class="login100-form-title">
-						Member Login
-					</span>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner has-top-divider">
+                    <div class="brand footer-brand">
+                        <a href="#">
+							<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								
+							</svg>
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ's</a>
+                        </li>
+                        <li>
+                            <a href="#">Support</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        
+                    </ul>
+                    <div class="footer-copyright">&copy; 2022 Inexture, all rights reserved</div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-					<div class="wrap-input100">
-						<input class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
-						
-					</div>
-
-					<div class="wrap-input100">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100"></span>
-						
-					</div>
-					
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="forgotPassword.jsp">
-							 Password?
-						</a>
-					</div>
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="register.jsp"> Create your Account </a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
+    <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,11 +1,16 @@
 package com.mvc.dao;
 
 import java.util.List;
+
 import com.mvc.bean.User;
+
+
 
 public interface UserDao {
  
-	List<User> get();
+	void addUser(User user);
+	
+	List<User> getAllUsers();
 	
 	User get(int id);
 	
@@ -14,5 +19,7 @@ public interface UserDao {
 	boolean delete(int id);
 	
 	boolean update(User user);
+	
+	void UpdateUserDetails(User bean);
 
 }

@@ -5,13 +5,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
- 
+import javax.servlet.http.HttpSession;
+
 import com.mvc.bean.LoginBean;
 import com.mvc.dao.LoginDao;
  
 public class LoginServlet extends HttpServlet {
- 
-    public LoginServlet() // default constructor
+	private static final long serialVersionUID = 1L;
+
+	public LoginServlet() // default constructor
     {
     }
  
@@ -32,8 +34,10 @@ public class LoginServlet extends HttpServlet {
  
         if(userValidate.equals("SUCCESS")) 
          {
-             request.setAttribute("email", email);
-             request.getRequestDispatcher("/Home.jsp").forward(request, response);
+        	HttpSession session=request.getSession();   
+            session.setAttribute("email", email);
+            response.sendRedirect("Home.jsp");
+      
          }
          else
          {

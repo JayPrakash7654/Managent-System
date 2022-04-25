@@ -16,19 +16,6 @@
    					<c:out value="Password Changed Successfully!"/>
 					</c:if>
 					
-					<%-- <%
-   						String msg=request.getParameter("msg");
-   						if("done".equals(msg))
-  						 {
-				   	%>
-	   				<h1>Password Changed Successfully!</h1>
-   					<%} %>
-   					<%
-  					 if("invalid".equals(msg))
-  					 {
-	 				 %>
-	  				<h1>Some thing Went Wrong! Try Again !</h1> 
-   					<%} %> --%>
    					<img src="images/img-01.png" alt="IMG">
 					<br><br><br><br><br>
     				<h2>Webapp Project</h2>

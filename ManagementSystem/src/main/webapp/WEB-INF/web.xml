@@ -54,4 +54,54 @@
      <servlet-name>LogoutServlet</servlet-name>
      <url-pattern>/LogoutServlet</url-pattern>
  </servlet-mapping>
+ <servlet>
+     <description></description>
+     <display-name>RetriveImage</display-name>
+     <servlet-name>RetriveImage</servlet-name>
+     <servlet-class>com.mvc.controller.RetriveImage</servlet-class>
+ </servlet>
+ <servlet-mapping>
+     <servlet-name>RetriveImage</servlet-name>
+     <url-pattern>/RetriveImage</url-pattern>
+ </servlet-mapping>
+ <servlet>
+     <description></description>
+     <display-name>ShowRecord</display-name>
+     <servlet-name>ShowRecord</servlet-name>
+     <servlet-class>com.mvc.controller.ShowRecord</servlet-class>
+ </servlet>
+ <servlet-mapping>
+     <servlet-name>ShowRecord</servlet-name>
+     <url-pattern>/ShowRecord</url-pattern>
+ </servlet-mapping>
+ <servlet>
+     <description></description>
+     <display-name>EditUser</display-name>
+     <servlet-name>EditUser</servlet-name>
+     <servlet-class>com.mvc.controller.EditUser</servlet-class>
+ </servlet>
+ <servlet-mapping>
+     <servlet-name>EditUser</servlet-name>
+     <url-pattern>/EditUser</url-pattern>
+ </servlet-mapping>
+ <servlet>
+     <description></description>
+     <display-name>EditServlet</display-name>
+     <servlet-name>EditServlet</servlet-name>
+     <servlet-class>com.mvc.controller.EditServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+     <servlet-name>EditServlet</servlet-name>
+     <url-pattern>/EditServlet</url-pattern>
+ </servlet-mapping>
+ <servlet>
+     <description></description>
+     <display-name>UserDetail</display-name>
+     <servlet-name>UserDetail</servlet-name>
+     <servlet-class>com.mvc.controller.UserDetail</servlet-class>
+ </servlet>
+ <servlet-mapping>
+     <servlet-name>UserDetail</servlet-name>
+     <url-pattern>/UserDetail</url-pattern>
+ </servlet-mapping>
 </web-app>

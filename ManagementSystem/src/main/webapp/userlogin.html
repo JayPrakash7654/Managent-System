@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<script> 
+function validate()
+{ 
+     var email = document.form.email.value; 
+     var pass = document.form.pass.value;
+ 
+     if (email==null || email=="")
+     { 
+     alert("Email cannot be blank"); 
+     return false; 
+     }
+     else if(pass==null || pass=="")
+     { 
+     alert("Password cannot be blank"); 
+     return false; 
+     } 
+}
+
+</script> 
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
+
+				<form class="login100-form" action="UserDetail" name="form" method="post" onsubmit="return validate()">
+					<span class="login100-form-title">
+						Member Login
+					</span>
+
+					<div class="wrap-input100">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						
+					</div>
+
+					<div class="wrap-input100">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+						
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="forgotPassword.jsp">
+							 Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="register.jsp"> Create your Account </a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

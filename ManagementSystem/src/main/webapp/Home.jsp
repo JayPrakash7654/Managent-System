@@ -3,7 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
-
+<!-- <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script> -->
 <style>
 h3
 {
@@ -21,7 +25,7 @@ h3
 
 <h3 class="alert">Work in progress!</h3>
 
-<h3 class="alert">Wait for the final result!</h3>
+<h3 class="alert">This is Admin Page!</h3>
 
       <br>
       <br>
